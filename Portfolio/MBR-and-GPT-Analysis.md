@@ -49,3 +49,23 @@ Highlighted in the image below is the second partition out of the four.
 
 
 Now, to calculate the size, I need to see what the last 4 bytes of this partition converts to in decimal format (in reference to Int32)
+
+<img width="1440" height="568" alt="Screenshot 2025-12-01 at 8 44 15 PM" src="https://github.com/user-attachments/assets/71b3d729-3973-4636-af57-ffe36334c72a" />
+
+32,192,512 x 512 = 16,482,566,144
+
+Now, I have to convert this number in bytes to gigabytes. This can be done using an online converter or calculator.
+One GB = 1,073,741,824 bytes
+
+The number I get is: 15.35, with rounding up, itd be 15.4 and even then, it'd be less than .5, however, the answer will take 16 instead of 15. 
+
+- 16GB
+
+
+#
+
+
+
+
+
+
