@@ -58,6 +58,7 @@ Now, I have to convert this number in bytes to gigabytes. This can be done using
 
 The formula is:
 One GB = 1,073,741,824 bytes
+
 Gigabytes = # of bytes / 1GB in bytes
 
 The number I get is: 15.35, with rounding up, itd be 15.4 and even then, it'd be less than .5, however, the answer will take 16 instead of 15. 
