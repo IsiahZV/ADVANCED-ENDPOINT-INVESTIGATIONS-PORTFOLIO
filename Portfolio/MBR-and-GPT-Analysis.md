@@ -55,7 +55,10 @@ Now, to calculate the size, I need to see what the last 4 bytes of this partitio
 32,192,512 x 512 = 16,482,566,144
 
 Now, I have to convert this number in bytes to gigabytes. This can be done using an online converter or calculator.
+
+The formula is:
 One GB = 1,073,741,824 bytes
+Gigabytes = # of bytes / 1GB in bytes
 
 The number I get is: 15.35, with rounding up, itd be 15.4 and even then, it'd be less than .5, however, the answer will take 16 instead of 15. 
 
