@@ -105,12 +105,16 @@ Upon editing the bytes (00 08 00 00), the decimal value (Int32) is 2048.
 
 Now is the time to search this value in HxD
 
+**Note:** Ensure search is set to "Dec"
+
 <img width="701" height="193" alt="Screenshot 2025-12-02 at 7 48 31 PM" src="https://github.com/user-attachments/assets/a5b5ebee-0f03-4129-b87e-8f5e8bcea8b7" />
 
 - EB
 
 
 <img width="567" height="193" alt="Screenshot 2025-12-02 at 8 15 49 PM" src="https://github.com/user-attachments/assets/03b8e8f5-e075-4748-8a02-64b1ea3f969a" />
+
+
 **Sidenote:** The questions don't have you identify the second point of corruption which is the **MBR signature** (55 AA) as this has to be applied for the last two bytes. Additionally, as rules requested, I saved the file to overwrite the corrupted MBR scheme and will now utilize FTK Imager for further analysis. 
 
 As a result, FTK Imager shows the working disk.
