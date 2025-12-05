@@ -67,7 +67,7 @@ The number I get is: 15.35, with rounding up, itd be 15.4 and even then, it'd be
 
 
 
-# Scenario
+# Scenario: MBR Corruption
 
 An organization's critical database server suddenly became unbootable, causing widespread panic. The initial investigation found an employee opened a malicious email attachment, prompting a reboot. The employee rebooted the system, after which the system became completely unbootable. Most of the clues point to the malware's deliberate corruption of the server's Master Boot Record (MBR).
 
@@ -156,7 +156,25 @@ Back to using FTK Imager, I'll go through some of the files and look for the Adm
 
 
 
-## 
+# GPT Analysis
 
+## Question 1: What is the partition type GUID of the 2nd partition given in the attached GPT file?
+
+
+<img width="1440" height="818" alt="Screenshot 2025-12-05 at 2 35 16 PM" src="https://github.com/user-attachments/assets/b3a1d02d-f038-4e63-aa3f-438eea0add7d" />
+
+
+Highlighted in its entirety is the second partition in the GPT file within the Partition Entry Array. The first row highlighted in blue is the partition type GUID. The first 3 groupings of these bytes go through reversing due to being in little-endian format.
+
+- 16 E3 C9 E3 5C 0B B8 4D 81 7D F9 2D F0 02 15 AE
+  - 16 E3 C9 E3 -> E3 C9 E3 16
+  - 5C 0B -> 0B 5C
+  - B8 4D -> 4D B8
+  - 81 7D
+  - F9 2D F0 02 15 AE
+
+This will result in: E3C9E316-0B5C-4DB8-817D-F92DF00215AE
+
+As an extra, research will show this to be a Microsoft Reserved Partition where the Windows system uses this partition for compatibility purposes.
 
 
