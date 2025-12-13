@@ -8,9 +8,9 @@
 **Environment:** TryHackMe – “FAT32 Analysis” room  
 **Tools Used:** HxD,
 
-## FAT32 Structure : Reserved and FAT Areas
+# FAT32 Structure : Reserved and FAT Areas
 
-**Question 1: We have a hypothetical file B and its cluster chain starts at cluster F and ends at cluster 10 . What would be the value of the FAT entry at cluster F? Provide the value as you would read it in the HxD editor (e.g. 00001111). Note: File B is not a file on the image.**
+## Question 1: We have a hypothetical file B and its cluster chain starts at cluster F and ends at cluster 10 . What would be the value of the FAT entry at cluster F? Provide the value as you would read it in the HxD editor (e.g. 00001111). Note: File B is not a file on the image.**
 
 <img width="291" height="204" alt="Screenshot 2025-12-13 at 12 35 00 PM" src="https://github.com/user-attachments/assets/dda9b6d8-67bf-4198-a2a6-3bdc76c0d615" />
 
@@ -29,15 +29,16 @@ File B is found in the root directory because it is the only place where files a
 <img width="301" height="304" alt="Screenshot 2025-12-13 at 12 39 52 PM" src="https://github.com/user-attachments/assets/591e25a9-5c66-4955-949c-11741bd3d5f2" />
 
 
-
 Hex uses base-16 - reference:
 0 1 2 3 4 5 6 7 8 9 A B C D E F (15)
 
 Mental example: If chaining from 5 to 6 would be 06 00 00 00 and 10 comes after F, it would be **10 00 00 00**.
 - My issue was that i didn't make much of a mental note of how they are displayed for continuation (i.e., 0D 00.., 0E 00.., 0F 00..,)
 
-So in all, the **value of of the fat entry at cluster F** (to chain to 10) would look like:
+So in all, the **value of of the FAT entry at cluster F** (to chain to 10) would look like:
 - Cluster [F] : 10 00 00 00
+
+
 
 ## Question 2: Using the FAT32_structure.001 image, answer the following question: At which offset does the  FAT2 table start ( give in the offset value without spaces)? Remember, FAT1 starts right after the Reserved Sectors and FAT2 starts right after FAT1.
 
