@@ -23,6 +23,9 @@ Disk
             ├── Cluster ?
             └── Cluster 10
 
+<img width="291" height="204" alt="Screenshot 2025-12-13 at 12 35 00 PM" src="https://github.com/user-attachments/assets/dda9b6d8-67bf-4198-a2a6-3bdc76c0d615" />
+
+
 Before starting, I need to clarify for the sake of myself due to the complexities of FAT32 analysis and for this, I will zoom out to understand the bigger picture. I do acknowledge that this question assumes that I already know where file B starts and that I'm already working within FAT #1.
 
 - Theoretically, **firstly**, I'd begin by identifying where the partitions start when working with MBR/GPT
