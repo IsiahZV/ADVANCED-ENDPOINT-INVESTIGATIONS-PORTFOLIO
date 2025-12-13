@@ -23,6 +23,7 @@ Before starting, I need to clarify for the sake of myself due to the complexitie
   - This is how I map out the entire partition I'm working in as the boot sector values help me calculate where **FAT #1 & 2 starts**, where the **root directory** starts, and where the **data region (clusters)** starts
 
 **QUESTION APPLICATION**
+
 File B is found in the root directory because it is the only place where files are listed, containing the file name, size, timestamps, and starting cluster number. The root directory should always be consulted first while FAT will tell you where the file continues and the data region will contain the actual information.
 
 Disk
