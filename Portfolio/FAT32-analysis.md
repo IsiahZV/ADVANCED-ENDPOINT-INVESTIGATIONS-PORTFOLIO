@@ -26,21 +26,9 @@ Before starting, I need to clarify for the sake of myself due to the complexitie
 
 File B is found in the root directory because it is the only place where files are listed, containing the file name, size, timestamps, and starting cluster number. The root directory should always be consulted first while FAT will tell you where the file continues and the data region will contain the actual information.
 
-Disk
-↓
-MBR / GPT
-↓
-Partition start
-↓
-Boot sector (filesystem map)
-↓
-Root directory (find File B)
-↓
-Starting cluster (from directory entry)
-↓
-FAT #1 (follow cluster chain)
-↓
-Data clusters (rebuild file)
+<img width="301" height="304" alt="Screenshot 2025-12-13 at 12 39 52 PM" src="https://github.com/user-attachments/assets/591e25a9-5c66-4955-949c-11741bd3d5f2" />
+
+
 
 Hex uses base-16 - reference:
 0 1 2 3 4 5 6 7 8 9 A B C D E F (15)
