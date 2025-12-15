@@ -54,9 +54,8 @@ The hex value translated is 961
 
 Now I add this value to the **Reserved Sectors** value. This can be found in offset 0000 0000 where the last two bytes reside (7E 18 -> 18 7E when little endian)
 - The reserved sectors value is 6270
-
-Sectors Per Fat (961) + Reserved Sectors (6270) * 512 = 3 702 272
-- Now to convert to hex (because of locating by offset) -> 387E00
+  - Sectors Per Fat (961) + Reserved Sectors (6270) * 512 = 3 702 272
+    - Now to convert to hex (because of locating by offset) -> 387E00
 
 Finally, I enter this value into the search in HxD.
 
