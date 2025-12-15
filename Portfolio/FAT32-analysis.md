@@ -1,4 +1,4 @@
-# FAT32 Analysis
+he# FAT32 Analysis
 
 **Date:** 2025-12-11
 
@@ -41,5 +41,31 @@ So in all, the **value of of the FAT entry at cluster F** (to chain to 10) would
 
 
 ## Question 2: Using the FAT32_structure.001 image, answer the following question: At which offset does the  FAT2 table start ( give in the offset value without spaces)? Remember, FAT1 starts right after the Reserved Sectors and FAT2 starts right after FAT1.
+
+**SIDENOTE:**
+- To find FAT1, you calculate the value of reserved sectors and multiply it by sector size (512) and convert to hex.
+- To find FAT2, you add the value of sectors per FAT to the reserved sectors field, multiply it by sector size (512) and convert to hex
+- For reference, I'm using 16-bit size in HxD
+
+
+Highlighted in the image below is the **Sectors Per FAT** hex value. 
+<img width="1440" height="609" alt="Screenshot 2025-12-15 at 6 34 21 PM" src="https://github.com/user-attachments/assets/ba24bd48-0d86-4055-987b-ec83fb0eb94a" />
+The hex value translated is 961
+
+Now I add this value to the **Reserved Sectors** value. This can be found in offset 0000 0000 where the last two bytes reside (7E 18 -> 18 7E when little endian)
+- The reserved sectors value is 6270
+
+Sectors Per Fat (961) + Reserved Sectors (6270) * 512 = 3 702 272
+- Now to convert to hex (because of locating by offset) -> 387E00
+
+Finally, I enter this value into the search in HxD.
+
+<img width="1440" height="489" alt="Screenshot 2025-12-15 at 6 53 22 PM" src="https://github.com/user-attachments/assets/1bb68bbd-1058-4022-b2a6-e4c0056cd303" />
+<img width="1440" height="175" alt="Screenshot 2025-12-15 at 6 53 56 PM" src="https://github.com/user-attachments/assets/d4f60688-1289-4d3f-b49a-52802ed7052b" />
+
+This is where the FAT2 table starts: 00387E00
+
+
+
 
 
