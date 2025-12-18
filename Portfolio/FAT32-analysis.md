@@ -65,6 +65,10 @@ Finally, I enter this value into the search in HxD.
 This is where the FAT2 table starts: 00387E00
 
 
+# Data Area
+
+## What is the filename of the file that starts at cluster 9?
+
 
 
 
